@@ -1,3 +1,5 @@
+// Paul Romer, CSD 320, Aug 13, 2024, Module 1.2 assignment
+
 public class Module1 {
     public static void main(String[] args) {
         // prints math statements
@@ -21,5 +23,13 @@ public class Module1 {
  * - The second expression uses numbers that are integer data types. Java handles the division of integers with 
  *   less precision because it discards the decimal part. When evaluated, the integers 1 / 3 = 0. In traditional math and floating-point
  *   math, it would result in .333... but because we are using integers, what is to the right of the decimal is lost, changing 
- *   the precision of the calculation and the final answer to 4, instead of 3.2837384837384844 when the division is done with doubles. 
+ *   the precision of the calculation and the final answer to 4, instead of 3.2837384837384844 when the division is done with doubles.
+ * 
+ * It tends to be better to use integers when programming. They require less memory than doubles because . Also, integer calculations are
+ * faster than floating point calculations. These benefits come with the downside of less percision That said, when percision is required, 
+ * a double or float is are more apporpiate. 
+ *  
+ *  Sources: 
+ *  Textbook 
+ *  https://discuss.codecademy.com/t/why-use-integers-if-doubles-can-do-more/809923
  */
