@@ -7,12 +7,20 @@
 // 3. finalTemperature and initialTemperature are temperatures in Celsius
 // 4. Q is the results in Joules
 
+import java.util.Scanner;
+
 public class EnergyCalculator {
     public static void main(String[] args) {
+        // Create scanner object
+        Scanner input = new Scanner(System.in);
+        
         // Prompt the user for input
-        double waterMass = 1;
-        double initialTemperature = 60;
-        double finalTemperature = 100;
+        System.out.print("The mass of the water in kilograms is: ");
+        double waterMass = input.nextDouble();
+        System.out.print("The initial tempurature of the water in celcius is: ");
+        double initialTemperature = input.nextDouble();
+        System.out.print("The final tempurature of the water in celcius is: ");
+        double finalTemperature = input.nextDouble();
 
         // Calculate the energy required
         double Q = waterMass * (finalTemperature - initialTemperature) * 4184;
