@@ -1,3 +1,5 @@
+// Learning how to create a Scanner object and use it to get user input
+
 import java.util.Scanner;
 
 public class CalculateRadiusWithInput {
