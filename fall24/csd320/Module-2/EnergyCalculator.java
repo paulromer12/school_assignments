@@ -13,15 +13,53 @@ public class EnergyCalculator {
     public static void main(String[] args) {
         // Create scanner object
         Scanner input = new Scanner(System.in);
-        
-        // Prompt the user for input
-        System.out.print("The mass of the water in kilograms is: ");
-        double waterMass = input.nextDouble();
-        System.out.print("The initial tempurature of the water in celcius is: ");
-        double initialTemperature = input.nextDouble();
-        System.out.print("The final tempurature of the water in celcius is: ");
-        double finalTemperature = input.nextDouble();
 
+        // Declare variables
+        double waterMass = 0;
+        double initialTemperature = 0;
+        double finalTemperature = 0;
+        boolean validInput = false;
+        
+        // Prompt the user for water mass input
+        while (!validInput) {
+            try {
+                System.out.print("The mass of the water in kilograms is: ");
+                waterMass = input.nextDouble();
+                validInput = true; // Exit loop if input is valid
+            } catch (Exception e) {
+                System.out.println("Wrong input, please enter a valid number.");
+                input.next(); // Clear invalid input
+            }
+        }
+
+        validInput = false; // Reset for next input
+
+        // Prompt the user for initial temperature input
+        while (!validInput) {
+            try {
+                System.out.print("The initial temperature of the water in Celsius is: ");
+                initialTemperature = input.nextDouble();
+                validInput = true; // Exit loop if input is valid
+            } catch (Exception e) {
+                System.out.println("Wrong input, please enter a valid number.");
+                input.next(); // Clear invalid input
+            }
+        }
+
+        validInput = false; // Reset for next input
+
+        // Prompt the user for final temperature input
+        while (!validInput) {
+            try {
+                System.out.print("The final temperature of the water in Celsius is: ");
+                finalTemperature = input.nextDouble();
+                validInput = true; // Exit loop if input is valid
+            } catch (Exception e) {
+                System.out.println("Wrong input, please enter a valid number.");
+                input.next(); // Clear invalid input
+            }
+        }
+        
         // Calculate the energy required
         double Q = waterMass * (finalTemperature - initialTemperature) * 4184;
 
