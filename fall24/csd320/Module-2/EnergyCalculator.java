@@ -64,6 +64,6 @@ public class EnergyCalculator {
         double Q = waterMass * (finalTemperature - initialTemperature) * 4184;
 
         // Display the calculated result
-        System.out.println("The energy to raise the temperature of " + waterMass + " kg of water from " + initialTemperature + " degrees celcius to " + finalTemperature + " is " + Q + " joules");
+        System.out.println("The energy to raise the temperature of " + waterMass + " kg of water from " + initialTemperature + " degrees celcius to " + finalTemperature + " is " + Q + " joules.");
     }
 }
