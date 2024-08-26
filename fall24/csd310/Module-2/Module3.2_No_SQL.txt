@@ -1,0 +1,36 @@
+Translate the following business rules into one Entity relationship diagram (ERD) using Visual Paradigm.
+a USER has many ROLES.
+a USER has one BIRTHDATE.
+a USER can have many DEPENDENTS.
+Convert the translated diagram into one NoSQL data structure.
+
+NoSQL Data Structure: 
+{
+  "id": "1",
+  "first_name": "jane",
+  "last_name": "doe",
+  "email": "janedoe@example.com",
+  "birthdate": "1991-08-14",
+  "roles": [
+    {
+      "role_id": "role1",
+      "name": "Admin"
+    },
+    {
+      "role_id": "role2",
+      "name": "User"
+    }
+  ],
+  "dependents": [
+    {
+      "dependent_id": "dep1",
+      "name": "John Doe",
+      "relationship": "Child"
+    },
+    {
+      "dependent_id": "dep2",
+      "name": "Bob Doe",
+      "relationship": "Child"
+    }
+  ]
+}
