@@ -14,11 +14,11 @@ NoSQL Data Structure:
   "roles": [
     {
       "role_id": "role1",
-      "name": "Admin"
+      "role_name": "Admin"
     },
     {
       "role_id": "role2",
-      "name": "User"
+      "role_name": "User"
     }
   ],
   "dependents": [
