@@ -1,2 +1,10 @@
 venv/
+
+# ignore the bellevue venv
 /fall24/csd310/Module-6/bellevue
+
+# Ignore macOS .DS_Store files
+.DS_Store
+
+# Ignore Visual Studio Code settings
+.vscode/
