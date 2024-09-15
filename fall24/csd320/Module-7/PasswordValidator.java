@@ -7,5 +7,16 @@
 public class PasswordValidator {
     public static void main (String[] args) {
         
+        
+        public static Checker (String String1) {
+
+        }
+        // check for 8 characters
+
+        // check for both letters and digits
+
+        // check for uppercase
+
+        // check for lowercase
     }
 }
