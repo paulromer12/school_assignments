@@ -151,11 +151,18 @@ INSERT INTO Inventory (item_name, current_quantity, supplier_id, last_delivery_d
 ('Boxes', 5000, 3, '2024-09-25'),
 ('Labels', 5000, 4, '2024-09-20'),
 ('Vats', 100, 5, '2024-09-15'),
-('Tubing', 50, 6, '2024-09-25');
+('Tubing', 50, 6, '2024-09-25'),
+('Merlot', 75, NULL, NULL),
+('Cabernet', '', ),
+('Chablis', '', ),
+('Chardonnay', '', );
 
 -- Wine
 INSERT INTO Wine (wine_name, wine_type, inventory_id) VALUES 
-();
+('Merlot', 'Red', 7),
+('Cabernet', 'Red', 8),
+('Chablis', 'White', 9),
+('Chardonnay', 'White', 10);
 
 -- Distributor
 INSERT INTO Distributor (distributor_name, wine_id) VALUES 
