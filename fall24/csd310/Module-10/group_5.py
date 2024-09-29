@@ -12,7 +12,7 @@ config = {
     'user': 'root',
     'password': '',
     'host': '127.0.0.1',
-    'database': 'movies',
+    'database': 'bacchus',
     'raise_on_warnings': True,
 }
 
@@ -38,15 +38,15 @@ def show_films(cursor, title):
     """
     Method to execute an inner join on all tables, iterate over the dataset, and output the results to the terminal.
     """
-    # SQL query with INNER JOIN to get film name, director, genre, and studio
+    # SQL query with INNER JOIN to get employee details
     cursor.execute("""
-        SELECT film_name AS Name, 
-               film_director AS Director, 
-               genre_name AS Genre, 
-               studio_name AS 'Studio Name' 
-        FROM film 
-        INNER JOIN genre ON film.genre_id = genre.genre_id 
-        INNER JOIN studio ON film.studio_id = studio.studio_id
+        SELECT e.employee_first_name AS FirstName, 
+               e.employee_last_name AS LastName, 
+               p.position_name AS Position, 
+               d.department_name AS Department
+        FROM Employee
+        INNER JOIN Position p ON e.position_id = p.position_id
+        INNER JOIN Department d ON e.department_id = d.department_id
     """)
 
     # Fetch all the results from the query
