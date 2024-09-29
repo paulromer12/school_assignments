@@ -100,3 +100,17 @@ CREATE TABLE Delivery (
 );
 
 -- Insert sample data
+
+-- Department
+INSERT INTO Department (department_name) VALUES 
+('Finance'), ('Marketing'), ('Production'), ('Distribution'), ('Sales'), ('Technology');
+
+-- Position
+INSERT INTO Position (position_name, department_id) VALUES 
+('Finance Manager', 1),
+('Marketing Director', 2),
+('Administrative Assistant', 2),
+('Production Manager', 3),
+('Warehouse Manager', 4),
+('Sales Associate', 5);
+
