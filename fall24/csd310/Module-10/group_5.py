@@ -44,7 +44,7 @@ def show_table(cursor, table_name, title):
     rows = cursor.fetchall()
 
     # Get column names
-    column_names = [i for i in cursor.description]
+    column_names = [i[0] for i in cursor.description]
 
     # Print the title of the result set
     print(f"\n== {title} ==")
@@ -59,14 +59,14 @@ def show_table(cursor, table_name, title):
 # Display data from each table
 tables = [
     ("Department", "DISPLAYING DEPARTMENTS"),
-    ("Position", "DISPLAYING POSITIONS"),
+    ("Role", "DISPLAYING Roles"),
     ("Employee", "DISPLAYING EMPLOYEES"),
     ("WorkHours", "DISPLAYING WORK HOURS"),
     ("Supplier", "DISPLAYING SUPPLIERS"),
     ("Inventory", "DISPLAYING INVENTORY"),
     ("Wine", "DISPLAYING WINES"),
     ("Distributor", "DISPLAYING DISTRIBUTORS"),
-    ("Order", "DISPLAYING ORDERS"),
+    ("`Order`", "DISPLAYING ORDERS"),
     ("Delivery", "DISPLAYING DELIVERIES")
 ]
 
