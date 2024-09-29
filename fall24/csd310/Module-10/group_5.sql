@@ -175,5 +175,10 @@ INSERT INTO `Order` (distributor_id, wine_id, order_date, shipment_date, quantit
 (3, 3, '2024-09-26', '2024-10-03', 50, 'Delivered');
 
 -- Delivery
-INSERT INTO Delivery (supplier_id, expected_delivery_date, actual_delivery_date, status, tracking_number) VALUES 
-();
+INSERT INTO Delivery (supplier_id, expected_delivery_date, actual_delivery_date, delivery_status, tracking_number) VALUES 
+(1, '2024-09-01', '2024-09-01', 'On-Time', 'TRK123456'),
+(2, '2024-09-30', '2024-09-30', 'On-Time', 'TRK789012'),
+(3, '2024-10-02', '2024-10-03', 'Delayed', 'TRK345678'),
+(4, '2024-10-01', '2024-10-01', 'On-Time', 'TRK910112'),
+(5, '2024-09-30', '2024-10-02', 'Delayed', 'TRK131415'),
+(6, '2024-10-02', NULL, 'Scheduled', 'TRK161718');
