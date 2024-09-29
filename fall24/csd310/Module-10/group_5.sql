@@ -27,7 +27,7 @@ CREATE TABLE Employee (
     employee_last_name VARCHAR(50) NOT NULL,
     role_id INT,
     department_id INT,
-    FOREIGN KEY (role_id) REFERENCES Position(role_id),
+    FOREIGN KEY (role_id) REFERENCES Role(role_id),
     FOREIGN KEY (department_id) REFERENCES Department(department_id)
 );
 
@@ -70,7 +70,7 @@ CREATE TABLE Wine (
 -- Create Distributor table
 CREATE TABLE Distributor (
     distributor_id INT PRIMARY KEY AUTO_INCREMENT,
-    distributor_name VARCHAR(100) NOT NULL,
+    distributor_name VARCHAR(100) NOT NULL
 );
 
 -- Create Order table
@@ -103,8 +103,8 @@ CREATE TABLE Delivery (
 INSERT INTO Department (department_name) VALUES 
 ('Finance'), ('Marketing'), ('Production'), ('Distribution'), ('Sales'), ('Technology'), ('Owner');
 
--- Position
-INSERT INTO Position (role_name, department_id) VALUES 
+-- Role
+INSERT INTO Role (role_name, department_id) VALUES 
 ('Finance Manager', 1),
 ('Marketing Director', 2),
 ('Administrative Assistant', 2),
@@ -140,7 +140,8 @@ INSERT INTO Supplier (supplier_name, supply_type) VALUES
 ('Shipping Supply Co', 'Boxes'),
 ('Shipping Supply Co', 'Labels'),
 ('Cook Plumbing Co', 'Vats'),
-('Cook Plumbing Co', 'Tubing');
+('Cook Plumbing Co', 'Tubing'),
+('Bacchus Winery', 'Wine');
 
 -- Inventory
 INSERT INTO Inventory (item_name, current_quantity, supplier_id, last_delivery_date) VALUES 
@@ -151,9 +152,9 @@ INSERT INTO Inventory (item_name, current_quantity, supplier_id, last_delivery_d
 ('Vats', 100, 5, '2024-09-15'),
 ('Tubing', 50, 6, '2024-09-25'),
 ('Merlot', 75, NULL, NULL),
-('Cabernet', '', ),
-('Chablis', '', ),
-('Chardonnay', '', );
+('Cabernet', 100, 7, NULL),
+('Chablis', 150, 7, NULL),
+('Chardonnay', 200, 7, NULL);
 
 -- Wine
 INSERT INTO Wine (wine_name, wine_type, inventory_id) VALUES 
