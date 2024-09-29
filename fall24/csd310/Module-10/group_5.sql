@@ -103,7 +103,7 @@ CREATE TABLE Delivery (
 
 -- Department
 INSERT INTO Department (department_name) VALUES 
-('Finance'), ('Marketing'), ('Production'), ('Distribution'), ('Sales'), ('Technology');
+('Finance'), ('Marketing'), ('Production'), ('Distribution'), ('Sales'), ('Technology'), ('Owner');
 
 -- Position
 INSERT INTO Position (position_name, department_id) VALUES 
@@ -111,12 +111,19 @@ INSERT INTO Position (position_name, department_id) VALUES
 ('Marketing Director', 2),
 ('Administrative Assistant', 2),
 ('Production Manager', 3),
-('Warehouse Manager', 4),
-('Sales Associate', 5);
+('Distribution Manager', 4),
+('Sales Associate', 5),
+('Owner', 7);
 
 -- Employee
 INSERT INTO Employee (employee_first_name, employee_last_name, position_id, department_id) VALUES 
-();
+('Stan', 'Bacchus', 7, 7),
+('David', 'Bacchus', 7, 7),
+('Janet', 'Collins', 1, 1),
+('Roz', 'Murphy', 2, 2),
+('Bob', 'Ulrich', 2, 2),
+('Henry', 'Doyle', 3, 4),
+('Maria', 'Costanza', 4, 5);
 
 -- WorkHours
 INSERT INTO WorkHours (employee_id, work_date, hours_worked, hourly_rate) VALUES 
