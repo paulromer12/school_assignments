@@ -114,3 +114,34 @@ INSERT INTO Position (position_name, department_id) VALUES
 ('Warehouse Manager', 4),
 ('Sales Associate', 5);
 
+-- Employee
+INSERT INTO Employee (employee_first_name, employee_last_name, position_id, department_id) VALUES 
+();
+
+-- WorkHours
+INSERT INTO WorkHours (employee_id, work_date, hours_worked, hourly_rate) VALUES 
+();
+
+-- Supplier
+INSERT INTO Supplier (supplier_name, supply_type) VALUES 
+();
+
+-- Inventory
+INSERT INTO Inventory (item_name, current_quantity, supplier_id, last_delivery_date) VALUES 
+();
+
+-- Wine
+INSERT INTO Wine (wine_name, wine_type, inventory_id) VALUES 
+();
+
+-- Distributor
+INSERT INTO Distributor (distributor_name, wine_id) VALUES 
+();
+
+-- Order
+INSERT INTO `Order` (distributor_id, wine_id, order_date, shipment_date, quantity_ordered, order_status) VALUES 
+();
+
+-- Delivery
+INSERT INTO Delivery (supplier_id, expected_delivery_date, actual_delivery_date, status, tracking_number) VALUES 
+();
