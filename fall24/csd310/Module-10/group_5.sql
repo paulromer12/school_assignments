@@ -17,7 +17,6 @@ CREATE TABLE Position (
     position_id INT PRIMARY KEY AUTO_INCREMENT,
     position_name VARCHAR(50) NOT NULL,
     department_id INT,
-    hours_worked INT,
     FOREIGN KEY (department_id) REFERENCES Department(department_id)
 );
 
