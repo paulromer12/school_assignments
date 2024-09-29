@@ -127,7 +127,13 @@ INSERT INTO Employee (employee_first_name, employee_last_name, position_id, depa
 
 -- WorkHours
 INSERT INTO WorkHours (employee_id, work_date, hours_worked, hourly_rate) VALUES 
-();
+(1, '2024-09-27', 9, 40),
+(2, '2024-09-27', 8.5, 40),
+(3, '2024-09-27', 8, 35),
+(4, '2024-09-27', 8, 35),
+(5, '2024-09-27', 8, 25),
+(6, '2024-09-27', 6, 35),
+(7, '2024-09-27', 8, 35);
 
 -- Supplier
 INSERT INTO Supplier (supplier_name, supply_type) VALUES 
