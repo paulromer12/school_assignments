@@ -12,10 +12,10 @@ CREATE TABLE Department (
     department_name VARCHAR(50) NOT NULL
 );
 
--- Create Position table
-CREATE TABLE Position (
-    position_id INT PRIMARY KEY AUTO_INCREMENT,
-    position_name VARCHAR(50) NOT NULL,
+-- Create Role table
+CREATE TABLE Role (
+    role_id INT PRIMARY KEY AUTO_INCREMENT,
+    role_name VARCHAR(50) NOT NULL,
     department_id INT,
     FOREIGN KEY (department_id) REFERENCES Department(department_id)
 );
@@ -25,9 +25,9 @@ CREATE TABLE Employee (
     employee_id INT PRIMARY KEY AUTO_INCREMENT,
     employee_first_name VARCHAR(50) NOT NULL,
     employee_last_name VARCHAR(50) NOT NULL,
-    position_id INT,
+    role_id INT,
     department_id INT,
-    FOREIGN KEY (position_id) REFERENCES Position(position_id),
+    FOREIGN KEY (role_id) REFERENCES Position(role_id),
     FOREIGN KEY (department_id) REFERENCES Department(department_id)
 );
 
@@ -104,7 +104,7 @@ INSERT INTO Department (department_name) VALUES
 ('Finance'), ('Marketing'), ('Production'), ('Distribution'), ('Sales'), ('Technology'), ('Owner');
 
 -- Position
-INSERT INTO Position (position_name, department_id) VALUES 
+INSERT INTO Position (role_name, department_id) VALUES 
 ('Finance Manager', 1),
 ('Marketing Director', 2),
 ('Administrative Assistant', 2),
@@ -114,7 +114,7 @@ INSERT INTO Position (position_name, department_id) VALUES
 ('Owner', 7);
 
 -- Employee
-INSERT INTO Employee (employee_first_name, employee_last_name, position_id, department_id) VALUES 
+INSERT INTO Employee (employee_first_name, employee_last_name, role_id, department_id) VALUES 
 ('Stan', 'Bacchus', 7, 7),
 ('David', 'Bacchus', 7, 7),
 ('Janet', 'Collins', 1, 1),
