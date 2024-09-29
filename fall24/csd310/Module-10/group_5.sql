@@ -137,7 +137,12 @@ INSERT INTO WorkHours (employee_id, work_date, hours_worked, hourly_rate) VALUES
 
 -- Supplier
 INSERT INTO Supplier (supplier_name, supply_type) VALUES 
-();
+('Bottles & Corks Co', 'Bottles'),
+('Bottles & Corks Co', 'Corks'),
+('Shipping Supply Co', 'Boxes'),
+('Shipping Supply Co', 'Labels'),
+('Cook Plumbing Co', 'Vats'),
+('Cook Plumbing Co', 'Tubing');
 
 -- Inventory
 INSERT INTO Inventory (item_name, current_quantity, supplier_id, last_delivery_date) VALUES 
