@@ -59,7 +59,7 @@ def show_table(cursor, table_name, title):
 # Display data from each table
 tables = [
     ("Department", "DISPLAYING DEPARTMENTS"),
-    ("Role", "DISPLAYING Roles"),
+    ("Role", "DISPLAYING ROLES"),
     ("Employee", "DISPLAYING EMPLOYEES"),
     ("WorkHours", "DISPLAYING WORK HOURS"),
     ("Supplier", "DISPLAYING SUPPLIERS"),
