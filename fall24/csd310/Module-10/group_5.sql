@@ -64,6 +64,8 @@ CREATE TABLE Wine (
     wine_name VARCHAR(100) NOT NULL,
     wine_type VARCHAR(50),
     inventory_id INT,
+    distributor_id INT,
+    Foreign Key (distributor_id) REFERENCES Distributor(distributor_id)
     FOREIGN KEY (inventory_id) REFERENCES Inventory(inventory_id)
 );
 
@@ -158,15 +160,17 @@ INSERT INTO Inventory (item_name, current_quantity, supplier_id, last_delivery_d
 ('Chardonnay', '', );
 
 -- Wine
-INSERT INTO Wine (wine_name, wine_type, inventory_id) VALUES 
-('Merlot', 'Red', 7),
-('Cabernet', 'Red', 8),
-('Chablis', 'White', 9),
-('Chardonnay', 'White', 10);
+INSERT INTO Wine (wine_name, wine_type, inventory_id, distributor_id) VALUES 
+('Merlot', 'Red', 7, 1),
+('Cabernet', 'Red', 8, 2),
+('Chablis', 'White', 9, 1),
+('Chardonnay', 'White', 10, 3);
 
 -- Distributor
-INSERT INTO Distributor (distributor_name, wine_id) VALUES 
-();
+INSERT INTO Distributor (distributor_name) VALUES 
+('Wine World'),
+('Grape Expectations'),
+('Vino Ventures');
 
 -- Order
 INSERT INTO `Order` (distributor_id, wine_id, order_date, shipment_date, quantity_ordered, order_status) VALUES 
