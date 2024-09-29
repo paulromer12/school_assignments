@@ -10,7 +10,7 @@ from mysql.connector import errorcode
 
 config = {
     'user': 'root',
-    'password': 'your password',
+    'password': '',
     'host': '127.0.0.1',
     'database': 'bacchus',
     'raise_on_warnings': True,
