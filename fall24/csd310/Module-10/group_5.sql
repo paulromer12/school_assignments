@@ -64,8 +64,6 @@ CREATE TABLE Wine (
     wine_name VARCHAR(100) NOT NULL,
     wine_type VARCHAR(50),
     inventory_id INT,
-    distributor_id INT,
-    Foreign Key (distributor_id) REFERENCES Distributor(distributor_id)
     FOREIGN KEY (inventory_id) REFERENCES Inventory(inventory_id)
 );
 
@@ -73,8 +71,6 @@ CREATE TABLE Wine (
 CREATE TABLE Distributor (
     distributor_id INT PRIMARY KEY AUTO_INCREMENT,
     distributor_name VARCHAR(100) NOT NULL,
-    wine_id INT,
-    FOREIGN KEY (wine_id) REFERENCES Wine(wine_id)
 );
 
 -- Create Order table
@@ -160,11 +156,11 @@ INSERT INTO Inventory (item_name, current_quantity, supplier_id, last_delivery_d
 ('Chardonnay', '', );
 
 -- Wine
-INSERT INTO Wine (wine_name, wine_type, inventory_id, distributor_id) VALUES 
-('Merlot', 'Red', 7, 1),
-('Cabernet', 'Red', 8, 2),
-('Chablis', 'White', 9, 1),
-('Chardonnay', 'White', 10, 3);
+INSERT INTO Wine (wine_name, wine_type, inventory_id) VALUES 
+('Merlot', 'Red', 7),
+('Cabernet', 'Red', 8),
+('Chablis', 'White', 9),
+('Chardonnay', 'White', 10);
 
 -- Distributor
 INSERT INTO Distributor (distributor_name) VALUES 
@@ -174,7 +170,9 @@ INSERT INTO Distributor (distributor_name) VALUES
 
 -- Order
 INSERT INTO `Order` (distributor_id, wine_id, order_date, shipment_date, quantity_ordered, order_status) VALUES 
-();
+(1, 1, '2024-09-28', '2024-10-05', 100, 'Processing'),
+(2, 2, '2024-09-27', '2024-10-04', 75, 'Shipped'),
+(3, 3, '2024-09-26', '2024-10-03', 50, 'Delivered');
 
 -- Delivery
 INSERT INTO Delivery (supplier_id, expected_delivery_date, actual_delivery_date, status, tracking_number) VALUES 
