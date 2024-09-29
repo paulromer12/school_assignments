@@ -146,7 +146,12 @@ INSERT INTO Supplier (supplier_name, supply_type) VALUES
 
 -- Inventory
 INSERT INTO Inventory (item_name, current_quantity, supplier_id, last_delivery_date) VALUES 
-();
+('Red Wine Bottles', 1000, 1, '2024-09-20'),
+('White Wine Corks', 500, 2, '2024-09-15'),
+('Boxes', 5000, 3, '2024-09-25'),
+('Labels', 5000, 4, '2024-09-20'),
+('Vats', 100, 5, '2024-09-15'),
+('Tubing', 50, 6, '2024-09-25');
 
 -- Wine
 INSERT INTO Wine (wine_name, wine_type, inventory_id) VALUES 
