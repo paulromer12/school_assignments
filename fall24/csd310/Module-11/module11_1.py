@@ -10,7 +10,7 @@ from datetime import datetime
 
 config = {
     'user': 'root',
-    'password': 'YOUR PASSWORD',
+    'password': '',
     'host': '127.0.0.1',
     'database': 'bacchus',
     'raise_on_warnings': True,
@@ -42,7 +42,7 @@ def get_employee_report():
 
     print("\n-- EMPLOYEE REPORT --")
     print(
-        "*This report generates hour data such as how many hours each employee worked for the day and which ones are projected to hit overtime and by how much overtime.*\n")
+        "*This report generates hour data such as how many hours each employee worked for the day and which ones are \n projected to hit overtime and by how much overtime.*\n")
     employee_hours = cursor.fetchall()
 
     for employee in employee_hours:
@@ -59,7 +59,7 @@ def get_wine_report():
         "SELECT o.order_id, o.quantity_ordered, w.wine_type, w.wine_name, d.distributor_name FROM `order` o JOIN `wine` w ON o.wine_ID = w.wine_ID JOIN `distributor` d ON o.distributor_id = d.distributor_id;")
 
     print("\n-- WINE PERFORMANCE REPORT --")
-    print("*This report generates order data based on wine, wine type, and breaks down the total amount of orders based on type of wine carried by Bacchus Winery.*")
+    print("*This report generates order data based on wine, wine type, and breaks down the total amount of orders based \n on type of wine carried by Bacchus Winery.*")
     total_red_wine = 0
     total_white_wine = 0
     red_wine_varieties = 0
