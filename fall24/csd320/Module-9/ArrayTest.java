@@ -1,3 +1,5 @@
+// Paul Romer, Module 9 assignment, CSD320, 9/30/2024
+
 // Write a program that reads and fills an array with 20 integers. Then, using the array elements, calculate the data to find and display:
 // The highest value entered.
 // The lowest value entered.
@@ -11,9 +13,10 @@ public class ArrayTest {
         // Initialize scanner object
         Scanner scanner = new Scanner(System.in);
 
-        // Initialize an array of 20 integers and get input from user
+        // Initialize an array of 20 integers
         int[] numbers = new int[20];
 
+        // Get input for those 20 integers from user
         System.out.println("Enter 20 integers:");
         for (int i = 0; i < numbers.length; i++) {
             System.out.print("Number " + (i + 1) + ": ");
@@ -25,6 +28,7 @@ public class ArrayTest {
         double average = calculateAverage(numbers);
         int sum = calculateSum(numbers);
 
+        // Print the results of the calculations
         System.out.println("\nAnalysis:");
         System.out.println("----------------");
         System.out.printf("Highest value: %d%n", highest);
@@ -32,7 +36,7 @@ public class ArrayTest {
         System.out.printf("Average: %.2f%n", average);
         System.out.printf("Sum: %d%n", sum);
 
-        // Print the numbers array
+        // Print the array
         System.out.println("\nNumbers entered:");
         printArray(numbers, scanner);
 
@@ -80,14 +84,14 @@ public class ArrayTest {
         return sum;
     }
 
-    // Helper method to print the contents of an array
+    // Method to print the contents of the array
     public static void printArray(int[] array, Scanner scanner) {
         System.out.print(" ");
         for (int i = 0; i < array.length; i++) {
             if (i != 0) {
                 System.out.print(", ");
             }
-            System.out.printf("%d ", array[i]);
+            System.out.printf("%d", array[i]);
         }
         System.out.println();
     }
