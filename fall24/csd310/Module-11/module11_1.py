@@ -10,7 +10,7 @@ from datetime import datetime
 
 config = {
     'user': 'root',
-    'password': '',
+    'password': 'YOUR PASSWORD',
     'host': '127.0.0.1',
     'database': 'bacchus',
     'raise_on_warnings': True,
