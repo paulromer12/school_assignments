@@ -10,7 +10,7 @@ from datetime import datetime
 
 config = {
     'user': 'root',
-    'password': 'YOUR PASSWORD',
+    'password': '',
     'host': '127.0.0.1',
     'database': 'bacchus',
     'raise_on_warnings': True,
@@ -66,7 +66,7 @@ def get_employee_report():
         "SELECT e.employee_ID, e.employee_first_name, e.employee_last_name, w.hours_worked, w.work_date FROM WorkHours w JOIN Employee e ON w.employee_ID = e.employee_ID ORDER BY w.hours_worked DESC;")
 
     print("\n-- EMPLOYEE REPORT --")
-    print("*This report generates hour data such as how many hours each employee worked for the day and which ones are projected to hit overtime and by how much overtime.*\n")
+    print("*This report generates hour data such as how many hours each employee worked for the day \n and which ones are projected to hit overtime and by how much overtime.*\n")
     employee_hours = cursor.fetchall()
 
     report_data = []
@@ -88,7 +88,7 @@ def get_wine_report():
         "SELECT o.order_id, o.quantity_ordered, w.wine_type, w.wine_name, d.distributor_name FROM `Order` o JOIN Wine w ON o.wine_ID = w.wine_ID JOIN Distributor d ON o.distributor_id = d.distributor_id;")
 
     print("\n-- WINE PERFORMANCE REPORT --")
-    print("*This report generates order data based on wine, wine type, and breaks down the total amount of orders based on type of wine carried by Bacchus Winery.*\n")
+    print("*This report generates order data based on wine, wine type, and breaks \n down the total amount of orders based on type of wine carried by Bacchus Winery.*\n")
     
     wine_data = cursor.fetchall()
 
@@ -128,8 +128,12 @@ try:
     cursor = db.cursor()
 
     get_late_deliveries()
+    print('\n' * 5)
     get_employee_report()
+    print('\n' * 5)
     get_wine_report()
+    print('\n' * 5)
+
 
 except mysql.connector.Error as err:
     if err.errno == errorcode.ER_ACCESS_DENIED_ERROR:
