@@ -12,12 +12,10 @@ CREATE TABLE Department (
     department_name VARCHAR(50) NOT NULL
 );
 
--- Create Role table
-CREATE TABLE Role (
-    role_id INT PRIMARY KEY AUTO_INCREMENT,
-    role_name VARCHAR(50) NOT NULL,
-    department_id INT,
-    FOREIGN KEY (department_id) REFERENCES Department(department_id)
+-- Create Position table
+CREATE TABLE `Position` (
+    position_id INT PRIMARY KEY AUTO_INCREMENT,
+    position_name VARCHAR(50) NOT NULL
 );
 
 -- Create Employee table
@@ -25,9 +23,9 @@ CREATE TABLE Employee (
     employee_id INT PRIMARY KEY AUTO_INCREMENT,
     employee_first_name VARCHAR(50) NOT NULL,
     employee_last_name VARCHAR(50) NOT NULL,
-    role_id INT,
+    position_id INT,
     department_id INT,
-    FOREIGN KEY (role_id) REFERENCES Role(role_id),
+    FOREIGN KEY (position_id) REFERENCES `Position`(position_id),
     FOREIGN KEY (department_id) REFERENCES Department(department_id)
 );
 
@@ -82,6 +80,8 @@ CREATE TABLE `Order` (
     shipment_date DATE,
     quantity_ordered INT,
     order_status VARCHAR(20),
+    employee_id INT,
+    FOREIGN KEY (employee_id) REFERENCES Employee(employee_id),
     FOREIGN KEY (distributor_id) REFERENCES Distributor(distributor_id),
     FOREIGN KEY (wine_id) REFERENCES Wine(wine_id)
 );
@@ -92,7 +92,6 @@ CREATE TABLE Delivery (
     supplier_id INT,
     expected_delivery_date DATE,
     actual_delivery_date DATE,
-    delivery_status VARCHAR(20),
     tracking_number VARCHAR(50),
     FOREIGN KEY (supplier_id) REFERENCES Supplier(supplier_id)
 );
@@ -103,18 +102,18 @@ CREATE TABLE Delivery (
 INSERT INTO Department (department_name) VALUES 
 ('Finance'), ('Marketing'), ('Production'), ('Distribution'), ('Sales'), ('Technology'), ('Owner');
 
--- Role
-INSERT INTO Role (role_name, department_id) VALUES 
-('Finance Manager', 1),
-('Marketing Director', 2),
-('Administrative Assistant', 2),
-('Production Manager', 3),
-('Distribution Manager', 4),
-('Sales Associate', 5),
-('Owner', 7);
+-- Position
+INSERT INTO `Position` (position_name) VALUES 
+('Finance Manager'),
+('Marketing Director'),
+('Administrative Assistant'),
+('Production Manager'),
+('Distribution Manager'),
+('Sales Associate'),
+('Owner');
 
 -- Employee
-INSERT INTO Employee (employee_first_name, employee_last_name, role_id, department_id) VALUES 
+INSERT INTO Employee (employee_first_name, employee_last_name, position_id, department_id) VALUES 
 ('Stan', 'Bacchus', 7, 7),
 ('David', 'Bacchus', 7, 7),
 ('Janet', 'Collins', 1, 1),
@@ -170,16 +169,16 @@ INSERT INTO Distributor (distributor_name) VALUES
 ('Vino Ventures');
 
 -- Order
-INSERT INTO `Order` (distributor_id, wine_id, order_date, shipment_date, quantity_ordered, order_status) VALUES 
-(1, 1, '2024-09-28', '2024-10-05', 100, 'Processing'),
-(2, 2, '2024-09-27', '2024-10-04', 75, 'Shipped'),
-(3, 3, '2024-09-26', '2024-10-03', 50, 'Delivered');
+INSERT INTO `Order` (distributor_id, wine_id, order_date, shipment_date, quantity_ordered, order_status, employee_id) VALUES 
+(1, 1, '2024-09-28', '2024-10-05', 100, 'Processing', 1),
+(2, 2, '2024-09-27', '2024-10-04', 75, 'Shipped', 2),
+(3, 3, '2024-09-26', '2024-10-03', 50, 'Delivered', 3);
 
 -- Delivery
-INSERT INTO Delivery (supplier_id, expected_delivery_date, actual_delivery_date, delivery_status, tracking_number) VALUES 
-(1, '2024-09-01', '2024-09-01', 'On-Time', 'TRK123456'),
-(2, '2024-09-30', '2024-09-30', 'On-Time', 'TRK789012'),
-(3, '2024-10-02', '2024-10-03', 'Delayed', 'TRK345678'),
-(4, '2024-10-01', '2024-10-01', 'On-Time', 'TRK910112'),
-(5, '2024-09-30', '2024-10-02', 'Delayed', 'TRK131415'),
-(6, '2024-10-02', NULL, 'Scheduled', 'TRK161718');
+INSERT INTO Delivery (supplier_id, expected_delivery_date, actual_delivery_date, tracking_number) VALUES 
+(1, '2024-09-01', '2024-09-01', 'TRK123456'),
+(2, '2024-09-30', '2024-09-30', 'TRK789012'),
+(3, '2024-10-02', '2024-10-03', 'TRK345678'),
+(4, '2024-10-01', '2024-10-01', 'TRK910112'),
+(5, '2024-09-30', '2024-10-02', 'TRK131415'),
+(6, '2024-10-02', NULL, 'TRK1718');
