@@ -1,0 +1,49 @@
+/* Paul Romer, Module 3.3 Assignment, CSD340 */
+
+h1 {
+    text-align: center;
+}
+
+h3 {
+    font-weight: 500;
+}
+
+ol, ul {
+    font-weight: 300;
+}
+
+.left-div {
+    width: 45%;
+    float: left;
+}
+
+.right-div {
+    width: 45%;
+    float: right;
+}
+
+.left-div h3, ol {
+    border: 1px solid red;
+    border-radius: 15px;
+    padding: 10px;
+    list-style-position: inside;
+}
+
+.right-div h3, ul {
+    border: 1px dashed red;
+    border-radius: 15px;
+    padding: 10px;
+    list-style-position: inside;
+    list-style-type: upper-roman;
+}
+
+.final-div {
+    width: 100%;
+    margin-top: 60%;
+    float: right;
+    margin-bottom: 20px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
