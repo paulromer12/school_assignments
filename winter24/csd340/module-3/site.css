@@ -1,0 +1,34 @@
+/* Paul Romer, Module 3 */
+
+/* Google Fonts import */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+
+/* Container styles */
+#container {
+    margin-top: 50px;
+    margin-left: 100px;
+    margin-right: 100px;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Heading styles */
+h1, h2, h3, h4 {
+    background-color: #4A90E2;
+    color: white;
+    border: 1px solid #D6A800;
+    padding: 10px;
+}
+
+/* Link styles */
+a {
+    color: #2C3E50;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #3498DB;
+}
+
+a:visited {
+    color: #8E44AD;
+}
