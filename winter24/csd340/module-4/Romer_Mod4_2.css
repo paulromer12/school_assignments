@@ -1,0 +1,48 @@
+/* Paul Romer, Module 4.2 Assignment, CSD340 */
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+#container {
+    width: 80%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+#image-gallery {
+    margin-top: 10%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+h1 {
+    color: rgba(255, 0, 0, 0.5); 
+    text-align: center;
+}
+
+h3 {
+    color: rgba(0, 255, 0, 0.5);
+    text-align: center;
+}
+
+figcaption {
+    color: rgba(0, 0, 255, 0.5);
+    font-style: italic;
+    font-size: .75em;
+}
+
+img {
+    max-width: 200px;
+    max-height: 300px;
+    width: auto;
+    height: auto;
+}
+
+.final-div {
+    width: 100%;
+    margin-top: 60%;
+    float: right;
+    margin-bottom: 20px;
+}
