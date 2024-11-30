@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Paul Romer, Module 9.2 assignment-->
+<!-- GitHub Repo: https://github.com/paulromer12/school_assignments/tree/main/winter24/csd340/module-9-->
+<head>
+    <meta name="description" content="A personal introduction to Paul Romer" />
+    <meta name="keywords" content="introduction, html, css" />
+    <meta name="robots" content="nofollow" />
+    <meta name="author" content="Paul Romer" />
+    <link href="Romer_Mod9_2.css" type="text/css" rel="stylesheet" />
+    <title>CSD 340 Web Development with HTML and CSS</title>
+
+    <script>
+        let word1 = "Fort Worth";
+        let word2 = "Waco";
+        let word3 = "computers";
+        let word4 = "Formula 1";
+    </script>
+</head>
+
+<body>
+    <div id=”container”>
+        <h1>Assignment 9.3: JavaScript - Part 1</h1>
+        
+        <h2>Personal Introduction</h2>
+            <p class = "intro">Hi, I'm Paul Romer. I currently live in <span id="word1">_______</span>, Texas with my wife and 2 dogs. I work at Fidelity investments. I'm in school at Bellevue University studying Software Development.</p>
+            
+            <p><span class = "sentence">I grew up just outside of <span id="word2">_______</span>, Texas and graduated from a small high school with about 125 people in my graduating class.</span> I met my wife while in college in Idaho. We got married in 2016 and moved to Utah.</p>
+
+            <p>I'm studying Software Development so that I can have more advancement opportunity at work. I enjoy learning about <span id="word3">_______</span> and technology, and love the feeling when I can use technology to solve problems. I hope that it can lead to an enjoyable career that will provide a good life for my family. </p>
+
+            <p>In my free time, I enjoy watching <span id="word4">_______</span> and college football. I enjoy most sports, but don't have time to pursue all of those interests. I also enjoy doing projects or playing sports outside. </p>
+            <br />
+
+        <button type="button" onclick="document.getElementById('word1').innerHTML = word1">Word 1</button> 
+        <button type="button" onclick="document.getElementById('word2').innerHTML = word2">Word 2</button>
+        <button type="button" onclick="document.getElementById('word3').innerHTML = word3">Word 3</button>
+        <button type="button" onclick="document.getElementById('word4').innerHTML = word4">Word 4</button>
+    <hr />
+
+    <address>
+        <p><a href="https://www.bellevue.edu/">Bellevue University</a></p> 
+        <p>1000 Galvin Rd S</p>
+        <p>Bellevue, NE  68005</p>
+    </address>
+
+        </div>
+
+        <div id="final-div">
+            <a href="../module-3/index.html">Back to Landing Page</a>
+        </div>  
+    </body>
+
+</html>
