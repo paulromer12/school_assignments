@@ -1,0 +1,45 @@
+<!-- Paul Romer, Module 10.3 Assignment-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSD 340 Web Development with HTML and CSS</title>
+    <link rel="stylesheet" type="text/css" href="site.css">
+    
+    <style>
+        body {
+          background-color: #6b5d84;
+        }
+        
+        h1, h2, p {
+          font-family: Arial, sans-serif;
+          color: white;
+        }
+    </style>
+    <script>
+        function changeEmoji() {
+            emoji.src='party.png';
+        }
+    </script>
+</head>
+<body>
+
+    <div id="container">
+        <h1>Assignment 10.3: JavaScript - Part 2</h1>
+        
+        <div>
+            <a href=#
+            onmouseover="emoji.src='happy.png';"
+            onmouseout="emoji.src='sad.png';"
+            onclick="changeEmoji()"
+            >
+            <img border = 0 name = "emoji" src = "sad.png">
+            </a>
+            <h2>Sad/Happy</h2>
+            <p>Run your mouse over the emoji to change <br> Click for a surprise</p>
+        </div>
+    </div>
+
+</body>
+</html>
