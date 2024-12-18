@@ -64,8 +64,10 @@ ol, ul {
 
 .final-div {
     width: 99%;
+    float: right;
     position: absolute;
     bottom: 3%;
+    color: red;
 }
 
 a:hover {
