@@ -1,0 +1,82 @@
+<!-- Paul Romer, Module 12.2 Assignment CSD 340 --> 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSD 340 Web Development with HTML and CSS</title>
+    <link rel="stylesheet" type="text/css" href="Romer_Mod12_2.css">
+    <script>
+        const books = [
+            "The Book of Mormon",
+            "The Bible",
+            "Ender's Game",
+            "Great by Choice",
+            "How to Make Friends and Influence People",
+            "A Hacker's Mind",
+            "The Art of Learning",
+            "A Christmas Carol",
+            "The Pheonix Project",
+            "Harry Potter"
+        ];
+
+        function displayBooks(order) {
+            const bookList = document.getElementById('book-list');
+            bookList.innerHTML = '';
+
+            if (order === 'asc') {
+                for (let i = 0; i < books.length; i++) {
+                    const li = document.createElement('li');
+                    li.textContent = i+1+'. ' + books[i];
+                    bookList.appendChild(li);
+                }
+            } else {
+                for (let i = books.length - 1; i >= 0; i--) {
+                    const li = document.createElement('li');
+                    li.textContent = i+1+'. ' + books[i];
+                    bookList.appendChild(li);
+                }
+            }
+        }                           
+
+        document.addEventListener('DOMContentLoaded', () => {
+            displayBooks('asc');
+            
+            document.getElementById('top-to-bottom').addEventListener('click', () => displayBooks('asc'));
+            document.getElementById('bottom-to-top').addEventListener('click', () => displayBooks('desc'));
+        });
+    </script>
+</head>
+<body>
+    <div id="container">
+        <h1>Assignment 12.2: JavaScript - Part 4</h1>
+        
+        <div class="left-div">
+            <div class="book-container">
+                <h3>Top 10 Favorite Books</h3>
+                <hr>
+                <button id="top-to-bottom">Top to Bottom</button>
+                <button id="bottom-to-top">Bottom to Top</button>
+                <ul id="book-list"></ul>
+            </div>
+        </div>
+
+        <div class="right-div">
+            <h3>5 Things I've Learned Since the Course Started</h3>
+            <ul>
+                <li>HTML structure</li>
+                <li>CSS styling</li>
+                <li>HTML and CSS Validation</li>
+                <li>The importance of intentional design</li>
+                <li>Best practices for web development</li>
+            </ul>
+        </div>
+
+        <div class="christmas"><h1>Merry Christmas!!</h1></div>
+    </div>
+
+    <div class="final-div">
+        <a href="index.html" style="float: right;">Back to Landing Page</a>
+    </div>
+</body>
+</html>

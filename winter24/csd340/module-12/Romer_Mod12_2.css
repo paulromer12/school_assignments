@@ -1,0 +1,88 @@
+/* Paul Romer, Module 12.2 Assignment, CSD340 */
+
+:root {
+    background-color: rgb(0, 89, 0);
+    color: white;
+}
+
+h1 {
+    text-align: center;
+}
+
+h3 {
+    font-weight: 500;
+}
+
+ol, ul {
+    font-weight: 300;
+}
+
+.left-div {
+    width: 45%;
+    float: left;
+    padding-left: 50px;
+}
+
+.left-div h3, ul {
+    padding-top: 10px;
+    border-radius: 15px;
+    list-style-position: inside;
+}
+
+.right-div {
+    width: 45%;
+    float: right;
+    padding-right: 50px;
+}
+
+.right-div h3, .right-div ul {
+    border: 1px dashed red;
+    border-radius: 15px;
+    padding: 10px;    
+}
+
+.christmas {
+    color: gold;
+    width: 100%;
+    position: absolute;
+    bottom: 15%;
+    text-align: center;
+    padding: 20px;
+    font-size: 4em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    transition: text-shadow 0.3s ease;
+}
+
+.christmas:hover {
+    text-shadow: 
+        0 0 10px #fff,
+        0 0 20px #fff,
+        0 0 30px #ff0000,
+        0 0 40px #ff0000;
+    cursor: pointer;
+}   
+
+.final-div {
+    width: 99%;
+    position: absolute;
+    bottom: 3%;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+#book-list {
+    list-style-type: none;
+}
+
+.book-container {
+    border: 1px solid red;
+    border-radius: 15px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.book-container h3 {
+    margin-top: 0;
+}
