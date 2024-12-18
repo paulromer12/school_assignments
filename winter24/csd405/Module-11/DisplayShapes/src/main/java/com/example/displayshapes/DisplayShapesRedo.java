@@ -1,3 +1,5 @@
+// Paul Romer, Module 12 Assignment
+
 package com.example.displayshapes;
 
 import javafx.application.Application;
@@ -13,7 +15,7 @@ import javafx.scene.paint.Color;
 import javafx.scene.shape.*;
 import javafx.stage.Stage;
 
-public class DisplayShapes extends Application {
+public class DisplayShapesRedo extends Application {
 
     public static void main(String[] args) {
         launch(args);
