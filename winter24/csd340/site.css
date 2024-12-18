@@ -3,6 +3,11 @@
 /* Google Fonts import */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
 
+:root {
+    background-color: #2C3E50;
+    color: white;
+}
+
 /* Container styles */
 #container {
     margin-top: 50px;
@@ -21,7 +26,7 @@ h1, h2, h3, h4 {
 
 /* Link styles */
 a {
-    color: #2C3E50;
+    color: white;
     text-decoration: none;
 }
 
