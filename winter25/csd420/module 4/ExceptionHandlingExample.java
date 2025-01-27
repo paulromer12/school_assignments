@@ -6,7 +6,7 @@ public class ExceptionHandlingExample {
         double result = numerator / denominator;
         System.out.println("Result: " + result);
         try {
-            double result = numerator / denominator;
+            result = numerator / denominator;
             System.out.println("Result: " + result);
         } catch (ArithmeticException e) {
             System.out.println("Error: Division by zero occurred. Exception: " + e.getMessage());
