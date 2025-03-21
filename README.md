@@ -1,7 +1,7 @@
 # school_assignments
 a place to demonstrate my programming assignments for school and practice git
 
-# CSD 340 Web Development with HTML and CSS
+# CSD 380 DevOps
 ## Contributors
 * John Woods
 * Paul Romer
