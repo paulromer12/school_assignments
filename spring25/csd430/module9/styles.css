@@ -1,0 +1,66 @@
+scifi_library {
+    display: block;
+    font-family: sans-serif;
+    margin: 20px;
+    padding: 10px;
+    background-color: gray;
+    border: 1px solid orange;
+    border-radius: 8px;
+  }
+
+scifi_library::before {
+    content: "Sci-Fi Books"; 
+    display: block;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: orange;
+    text-align: center; 
+}
+  
+  book {
+    display: block;
+    background-color: lightgray;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    padding: 15px;
+  }
+  
+  title {
+    display: block;
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+    margin-bottom: 8px;
+  }
+  
+  published, series_length, adaptation {
+    display: block;
+    margin-left: 10px;
+    margin-bottom: 5px;
+  }
+  
+  published::before {
+    content: "Published: ";
+    font-weight: bold;
+    color: black;
+  }
+  
+  series_length::before {
+    content: "Books in Series: ";
+    font-weight: bold;
+    color: black;
+  }
+  
+  adaptation[has_movie="true"]::before {
+    content: "Has Movie/TV Adaptation";
+    font-weight: bold;
+    color: green;
+  }
+  
+  adaptation[has_movie="false"]::before {
+    content: "No Movie/TV Adaptation";
+    font-weight: bold;
+    color: red;
+  }

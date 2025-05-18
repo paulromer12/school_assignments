@@ -1,0 +1,10 @@
+<!ELEMENT scifi_library (book+)>
+
+<!ELEMENT book (title, published, adaptation, series_length)>
+
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT published (#PCDATA)> 
+<!ELEMENT adaptation EMPTY>
+<!ATTLIST adaptation has_movie (true | false) #REQUIRED>
+
+<!ELEMENT series_length (#PCDATA)>

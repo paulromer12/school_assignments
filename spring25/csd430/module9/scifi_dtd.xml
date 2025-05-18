@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- <!DOCTYPE scifi_library SYSTEM "scifi.dtd"> -->
+<!-- <?xml-stylesheet type="text/css" href="styles.css"?> -->
+
+<scifi_library>
+
+  <book>
+    <title>Foundation</title>
+    <published>1951</published>
+    <adaptation has_movie="true"/> <series_length>7</series_length> </book>
+
+  <book>
+    <title>Dune</title>
+    <published>1965</published>
+    <adaptation has_movie="true"/>
+    <series_length>6</series_length> </book>
+
+  <book>
+    <title>Ready Player One</title>
+    <published>2011</published>
+    <adaptation has_movie="true"/>
+    <series_length>2</series_length> </book>
+
+  <book>
+    <title>Ender's Game</title>
+    <published>1985</published>
+    <adaptation has_movie="true"/>
+    <series_length>5</series_length> </book>
+
+  <book>
+    <title>Hyperion</title>
+    <published>1989</published>
+    <adaptation has_movie="false"/>
+    <series_length>4</series_length> </book>
+
+</scifi_library>
