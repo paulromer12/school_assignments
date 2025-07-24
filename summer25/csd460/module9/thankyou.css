@@ -1,0 +1,46 @@
+@charset "UTF-8";
+
+/* Main container styling */
+.thankyou-container {
+  max-width: 800px;
+  margin: 80px auto;
+  padding: 40px;
+  background-color: #FEFAE0;
+  border-radius: 10px;
+  border: 2px solid #DDA15E;
+  box-shadow: 0 2px 8px rgba(40, 54, 24, 0.2);
+  text-align: center;
+}
+
+/* Main heading */
+.thankyou-container h2 {
+  color: #606C38;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+/* Paragraph text */
+.thankyou-container p {
+  font-size: 16px;
+  color: #283618;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+/* Back to Home Button */
+.thankyou-container a button {
+  padding: 10px 20px;
+  background-color: #BC6C25;
+  color: #FEFAE0;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.thankyou-container a button:hover {
+  background-color: #DDA15E;
+  color: #283618;
+}
