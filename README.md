@@ -34,7 +34,3 @@ Each class folder follows a module-based structure (Module 1 through Module 12) 
   Sorting Visualizer (Module 12): Algorithm visualization tool in Java.
 
 For additional courses (Summer 2025, Fall 2025, Winter 2025, etc.), explore the corresponding term folders for a similar module breakdown and project files.
-
-## Contributors
-- John Woods
-- Paul Romer
