@@ -29,8 +29,8 @@ Each class folder follows a module-based structure (Module 1 through Module 12) 
 
 ### Spring 2025
 - **CSD 380: DevOps**  
-  Final Project Report (Module 12): Documented DevOps workflows and automation steps.
-- **CSD 430: Data Structures & Algorithms**  
-  Sorting Visualizer (Module 12): Algorithm visualization tool in Java.
+  Project Report (Module 11): Security controls in shared source code repositories ppt. 
+- **CSD 430: Server Side Development**  
+  Ebookshop Project (Module 6): Ebookshop JEE JSP using JDBC. 
 
 For additional courses (Summer 2025, Fall 2025, Winter 2025, etc.), explore the corresponding term folders for a similar module breakdown and project files.
